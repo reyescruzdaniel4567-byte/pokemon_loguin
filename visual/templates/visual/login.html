@@ -1,0 +1,40 @@
+{% extends 'visual/base.html' %}
+{% load static %}
+
+{% block titulo %}Iniciar Sesión - Pokédex{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'visual/css/login.css' %}">
+
+<section class="seccion contenedor-login">
+    <h2 class="titulo-centrado">Acceso Administrador</h2>
+    <p class="login-subtitulo">Inicia sesión para gestionar Pokémon, Entrenadores y Gimnasios</p>
+
+    <div class="aviso-intentos">
+        Por seguridad tienes máximo <strong>3 intentos</strong> permitidos.
+    </div>
+
+    {% if form.errors %}
+        <div class="mensaje-error">
+            Usuario o contraseña incorrectos. Inténtalo de nuevo.
+        </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="grupo-campo">
+            <label for="id_username">Usuario</label>
+            <input type="text" name="username" id="id_username" placeholder="Ej: admin_pokemon" required autofocus>
+        </div>
+
+        <div class="grupo-campo">
+            <label for="id_password">Contraseña</label>
+            <input type="password" name="password" id="id_password" placeholder="Ingresa tu contraseña" required>
+        </div>
+
+        <button type="submit" class="btn-nuevo btn-ingresar-full">
+            Ingresar a la Pokédex
+        </button>
+    </form>
+</section>
+{% endblock %}

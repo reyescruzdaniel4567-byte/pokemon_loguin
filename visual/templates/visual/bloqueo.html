@@ -1,0 +1,19 @@
+{% extends 'visual/base.html' %}
+{% load static %}
+
+{% block titulo %}Acceso Bloqueado - Pokédex{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'visual/css/login.css' %}">
+
+<section class="seccion contenedor-bloqueo">
+    <div class="icono-candado">🔒</div>
+    <h2 class="titulo-bloqueo">Acceso Bloqueado Temporalmente</h2>
+    <p class="texto-bloqueo">
+        Has superado el límite de <strong>3 intentos fallidos</strong> de inicio de sesión.
+    </p>
+    <p class="texto-bloqueo">
+        Por seguridad, debes esperar <strong>15 minutos</strong> antes de volver a intentarlo.
+    </p>
+</section>
+{% endblock %}

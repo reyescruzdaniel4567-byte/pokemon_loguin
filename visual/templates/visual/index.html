@@ -1,8 +1,26 @@
 {% extends 'visual/base.html' %}
+{% load static %}
 
 {% block titulo %}Inicio - Pokédex{% endblock %}
 
 {% block contenido %}
+<link rel="stylesheet" href="{% static 'visual/css/login.css' %}">
+
+    <!-- Barra de sesión del Administrador -->
+    <section class="seccion barra-admin">
+        <div>
+            <span>Conectado como: <strong>{{ request.user.username }}</strong></span>
+            {% if request.user.groups.first %}
+                <span class="badge-admin">{{ request.user.groups.first.name }}</span>
+            {% endif %}
+        </div>
+        <form action="{% url 'logout' %}" method="post" class="form-logout">
+            {% csrf_token %}
+            <button type="submit" class="btn-crud btn-eliminar-rojo btn-cerrar-sesion">
+                Cerrar sesión
+            </button>
+        </form>
+    </section>
 
     <!-- Buscador -->
     <section id="buscador" class="seccion">
@@ -140,6 +158,10 @@
             {% empty %}
             <p class="vacio">No hay gimnasios registrados.</p>
             {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
         </div>
     </section>
 

@@ -1,0 +1,141 @@
+/* Estilos para Login, Bloqueo y Barra de Sesión de Administrador */
+
+.contenedor-login {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.titulo-centrado {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login-subtitulo {
+    text-align: center;
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.aviso-intentos {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.grupo-campo {
+    margin-bottom: 18px;
+}
+
+.grupo-campo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #222222;
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grupo-campo input:focus {
+    outline: none;
+    border-color: #e3350d;
+    box-shadow: 0 0 0 3px rgba(227, 53, 13, 0.15);
+}
+
+.btn-ingresar-full {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+}
+
+/* Pantalla de Bloqueo tras 3 intentos fallidos */
+.contenedor-bloqueo {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 35px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-top: 5px solid #dc3545;
+}
+
+.icono-candado {
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+.titulo-bloqueo {
+    color: #dc3545;
+    margin-bottom: 12px;
+}
+
+.texto-bloqueo {
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Barra de Administrador en index.html */
+.barra-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.badge-admin {
+    background-color: #e3350d;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.form-logout {
+    display: inline;
+}
+
+.btn-cerrar-sesion {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
